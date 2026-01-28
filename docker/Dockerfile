@@ -18,6 +18,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install /tmp/*.whl && \
-    pip install -U "tg-signer[tgcrypto,gui]"
+    pip install -U "tg-signer[tgcrypto,gui]" && \
+    rm -rf /tmp/*
 
 WORKDIR /opt/tg-signer
